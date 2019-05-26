@@ -1,0 +1,292 @@
+/*
+Theme Name:     Twenty Twelve Child
+Theme URI:      http://framboise314.fr/
+Description:    Thème enfant pour le thème Twenty Twelve
+Author:         Francois MOCQ
+Author URI:     http://www.framboise314.fr/a-propos-de-l-auteur/
+Template:       twentytwelve                             
+Version:        0.1.0
+*/
+@import url("../twentytwelve/style.css");
+/*-----------------
+Custom page layout
+-------------------*/
+/* début modifs par florian*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	vertical-align: auto;
+}
+
+/* Modification largeur de la colonne droite à 300 px */
+/* d'après https://www.ostraining.com/support-forum/wordpress-support/sidebar-width-for-wordpress-theme-twenty-twelve/  */
+
+.site-content {
+	float: left;
+	width: 63.104166667%;
+}
+
+	.widget-area {
+		float: right;
+		width: 33.041666667%;
+	}
+
+/* Fin de la modif de largeur */
+	
+.widget-area .widget {
+	margin-bottom: 1rem;
+}
+.widget-area .widget h3 {
+	margin-bottom: 0.714285714rem;
+}
+
+/* fin modifs par florian*/
+
+/* remove site margin */
+body .site{margin-top:0;}
+
+.site-content article {
+	border-bottom: 4px double #ededed;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	word-wrap: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+
+/* Insérer la zone de texte RECHERCHE dans l'entete */
+
+.header-search {
+    float: right;
+    margin-top: -20px;
+}
+@media (max-width: 650px) {
+	.header-search {
+		margin-top:5px;
+		text-align:center;
+		float:none;
+	}
+	.main-navigation  {
+		clear:both;
+	}
+}
+
+/* Enlever les soulignés des liens dans la sidebar */
+.widget-area .widget a {
+    text-decoration: none;
+}
+
+/* MODIF DES COMMENTAIRES */
+/* http://www.wpbeginner.com/wp-themes/how-to-style-your-wordpress-comments-layout/ */
+/* Changement de couleur */
+.commentlist .even .comment { 
+background-color:#ccddf2; 
+} 
+.commentlist .odd .comment {
+background-color:#CCCCCC;
+}
+
+/* Entete coloré */
+.comments-area article header {
+	margin: 0 0 48px;
+	overflow: hidden;
+	position: relative;
+	background-color:#E0255C;
+	color:#FFFFFF;
+	padding: 10px;
+}
+.comments-area article header time {
+    line-height: 1.71429;
+    text-decoration: none;
+    font-size: 0.857143rem;
+    color: #FFFFFF;
+}
+
+/* Réduire la taille de la marge haute du commentaire */
+.comments-area article header {
+    margin: 0px 0px 12px;
+}
+
+/* Mise en forme du bouton répondre */
+.reply { 
+	float:right;
+	margin:0 10px 10px 0;
+	text-align:center;
+	background-color: #55737D;
+	border:1px solid #55737D;
+	border-radius:3px;
+	padding:3px;
+	width:100px;
+	/* box-shadow: 1px 1px 2px 2px #E0255C; */
+}
+
+.comment article {
+	padding-bottom:2.79rem;
+}
+
+a.comment-reply-link,
+a.comment-edit-link {
+	color: #FFFFFF;
+	font-size: 13px;
+	font-size: 0.928571429rem;
+	font-weight:bold;
+	line-height: 1.846153846;
+	text-decoration:none;
+}
+
+a.comment-reply-link:hover,
+a.comment-edit-link:hover {
+	color: #f6e7d7;
+}
+
+/* Marge en bordure du commentaire */
+section {
+    margin: 10px;
+}
+
+/* Mise en forme du bouton Éditer */
+a.comment-edit-link {
+	float:left;
+	margin:0 0 10px 10px;
+	text-align:center;
+	background-color: #55737D;
+	border:1px solid #55737D;
+	border-radius:3px;
+	padding:3px;
+	width:75px;
+	/* box-shadow: 1px 1px 2px 2px #E0255C; */
+}
+
+/* Nom de l'auteur du commentaire en gras */
+.comments-area cite b {
+    font-weight: bold;
+}
+
+/* Modifier le formulaire de commentaire */
+#respond { 
+background: #ececec;
+padding:0 5px 0 5px;
+}
+
+/* Highlight active form field */
+/* http://www.wpbeginner.com/wp-themes/how-to-style-wordpress-comment-form/ */
+
+#respond input[type=text], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+ 
+ 
+#respond input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
+#author { 
+font-family: 'Lobster', cursive;
+font-size: 32px;
+color:#1d1d1d; 
+letter-spacing:.1em;
+} 
+
+#url  { 
+color: #21759b;
+font-family: "Lucida Console", "Courier New", "Courier", monospace; 
+} 
+
+#submit {
+font-family: Arial;
+color: #ffffff;
+font-size: 20px;
+padding: 10px;
+text-decoration: none;
+box-shadow: 0px 1px 3px #666666;
+-webkit-box-shadow: 0px 1px 3px #666666;
+-moz-box-shadow: 0px 1px 3px #666666;
+text-shadow: 1px 1px 3px #666666;
+background: -webkit-gradient(linear, 0 0, 0 100%, from(#006ad4), to(#003366));
+background: -moz-linear-gradient(top, #006ad4, #003366);
+} 
+
+#submit:hover {
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#003366), to(#006ad4));
+  background: -moz-linear-gradient(top, #003366, #006ad4)
+}
+
+/* BOUTON D'INSCRIPTION BLOG-FORUM */
+.bouton-framboise {
+	text-align: center;
+	vertical-align: middle;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: bold;
+	float: none;
+	width: 200px;
+	right: auto;
+	border-top-width: 1px;
+	border-right-width: 2px;
+	border-bottom-width: 2px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #F00;
+	border-right-color: #F00;
+	border-bottom-color: #F00;
+	border-left-color: #F00;
+	-moz-border-radius: 6px;        /* pour Mozilla */
+	-khtml-border-radius: 6px;      /* pour Safari et Chrome */
+	-webkit-border-radius: 6px;     /* pour Safari sur Mac */
+	border-radius: 6px;             /* CSS3 */
+	background-image: url(//www.framboise314.fr/wp-content/themes/twentytwelve-child/fond-bouton-framboise.png);
+	padding: 4px;
+	text-decoration: none;
+}
+
+.bouton-framboise a:link
+{
+color:white;
+text-decoration:none;
+}
+
+.bouton-framboise a:hover
+{
+color:#000;
+text-decoration:underline;
+}
+
+.widget-area .widget .textwidget {
+    line-height: 0.8 rem;
+}
+
+#text-3.widget.widget_text {
+/*florian    margin-bottom: 0;*/
+    margin-bottom: 1rem;
+}
+
+h3.widget-title {
+    line-height: 0.8 rem;
+}
+
+/* MODIFS COULEURS DU FORUM */
+
+/* Couleur de la ligne du haut */
+#bbpress-forums li.bbp-header {
+background: #FF7DAC;
+}
+
+/* Couleur de la ligne du bas */
+
+#bbpress-forums li.bbp-footer {
+background: #FF7DAC;
+}
+
+span.wpcf7-list-item {display: block}#Améliorer la présentation des liens#.blogroll li { margin: 15px 0 !important; padding:6px }.blogroll {margin: 1em; padding:0.1em; }.blogroll li{margin: 1em; padding:0.1em; }# Modifier la présentation des liens.blogroll a{text-decoration: none !important;}# Au passage de la souris #.blogroll li a:hover#{#text-decoration: underline !important;#color: #0000FF;}
